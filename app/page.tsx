@@ -9,6 +9,7 @@ import { AboutSection } from "@/components/sections/about-section"
 import { ContactSection } from "@/components/sections/contact-section"
 import { MagneticButton } from "@/components/magnetic-button"
 import { MetalButton } from "@/components/ui/liquid-glass-button"
+import { UserNav } from "@/components/user-nav"
 import { useRef, useEffect, useState } from "react"
 
 export default function Home() {
@@ -244,11 +245,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="scale-75">
-          <MetalButton onClick={() => window.open("/auth", "_self")}>
-            Commencer
-          </MetalButton>
-        </div>
+        <UserNav />
       </nav>
 
       <div
