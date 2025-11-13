@@ -8,6 +8,7 @@ import { ServicesSection } from "@/components/sections/services-section"
 import { AboutSection } from "@/components/sections/about-section"
 import { ContactSection } from "@/components/sections/contact-section"
 import { MagneticButton } from "@/components/magnetic-button"
+import { MetalButton } from "@/components/ui/liquid-glass-button"
 import { useRef, useEffect, useState } from "react"
 
 export default function Home() {
@@ -210,7 +211,7 @@ export default function Home() {
           />
         </Shader>
         <div className="absolute inset-0 bg-black/20" />
-      </div>
+      </div>re
 
       <nav
         className={`fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-6 transition-opacity duration-700 md:px-12 ${
@@ -243,9 +244,11 @@ export default function Home() {
           ))}
         </div>
 
-        <MagneticButton variant="secondary" onClick={() => scrollToSection(4)}>
-          Commencer
-        </MagneticButton>
+        <div className="scale-75">
+          <MetalButton onClick={() => window.open("/auth", "_self")}>
+            Commencer
+          </MetalButton>
+        </div>
       </nav>
 
       <div
